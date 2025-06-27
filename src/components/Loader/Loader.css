@@ -1,0 +1,44 @@
+/* Centering container */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+/* Outer spinning border circle */
+.spinner-circle {
+  width: 7rem;
+  height: 7rem;
+  border: 8px dotted #d1d5db; /* Light gray */
+  border-top-color: #3b82f6; /* Blue top border */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1s linear infinite;
+}
+
+/* Rotating animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Ping animation for the image */
+.loader-icon {
+  width: 50px;
+  animation: ping 1s infinite;
+}
+
+/* Ping animation keyframes */
+
+@keyframes ping {
+  to {
+    transform: rotate(-360deg);
+  }
+}
